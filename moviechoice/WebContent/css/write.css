@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.body {
+	margin-left : auto;
+	margin-top : 100px;
+	margin-right : auto;
+ 	position: relative;
+  	width: 35%;
+  	height: 35%;
+}
+.body:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.movie {
+	position: relative;
+	margin-top: 16px;
+/* 	width: 500px; */
+/*  	height: 30px; */
+ 	border: 1px solid #bbb;
+	border-radius: 5px;
+  	padding: 10px 12px;
+  	font-size: 14px;
+}
+.rvRate {
+position: relative;
+	margin-top: 16px;
+/*   width: 500px; */
+/*   height: 22px; */
+  border: 1px solid #bbb;
+border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.psTitle {
+position: relative;
+	margin-top: 16px;
+  width: 500px;
+  height: 22px;
+  border: 1px solid #bbb;
+border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+textarea {
+	position: relative;
+	margin-top: 16px;
+  width: 500px;
+  height: 400px;
+  border: 1px solid #bbb;
+border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.searchbtn {
+position: relative;
+border: 1px solid #bbb;
+	background-color: #888888;
+	border:  none;
+border-radius: 5px;
+	color: white;
+	 width: 100px;
+  height: 38px;
+}
+.searchbtn:hover {
+	background-color: #7C7C7C;
+}
+#file {
+	border: 1px solid #bbb;
+	background-color: #888888;
+	border:  none;
+	border-radius: 5px;
+	color: white;
+}
+#file2 {
+	border: 1px solid #bbb;
+	background-color: white;
+	border:  none;
+	border-radius: 5px;
+
+}
+.commitbtn {
+	border-radius: 5px;
+	 width: 100px;
+  	height: 38px;
+ border: 1px solid #bbb;
+ background-color: #56BEC0;
+ color: white;
+}
+.reset {
+	border-radius: 5px;
+		 width: 100px;
+  	height: 38px;
+ border: 1px solid #bbb;
+ background-color: white;
+}
+.reset:hover {
+background-color:#E7E7E7;
+}
+.commitbtn {
+	border-radius: 5px;
+		 width: 100px;
+  	height: 38px;
+ border: 1px solid #bbb;
+ background-color: #56BEC0;
+ color: white;
+}
+.commitbtn:hover {
+	background-color: #4EA8AA;
+}
+.h_button {
+	border-radius: 5px;
+		width: 70px;
+height: 30px;
+ border: 1px solid #bbb;
+ background-color: #888888;
+ color: white;
+}
+.h_button:hover {
+	background-color: #7C7C7C;
+}
+.button {
+	text-align: center;
+	padding: 40px;
+}
+.select {
+width: 130px;
+height: 42px;
+ border: 1px solid #bbb;
+border-radius: 5px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
