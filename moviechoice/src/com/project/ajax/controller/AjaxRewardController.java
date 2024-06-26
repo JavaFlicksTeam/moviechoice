@@ -35,11 +35,12 @@ public class AjaxRewardController extends HttpServlet {
 		
 //		String rwDate = (String)request.getAttribute("rwDate");
 //		System.out.println("rwDate : " + rwDate);
-		
+		listTotVO vo = null;
 		//날짜 조회한 이달의 리뷰
 		if ("rwMainAjax".equals(action)) {
 			System.out.println(">> action: rwMainAjax 요청 처리~~");
-		
+			request.setAttribute("vo", vo);
+		 
 			//검색 클릭해서 다른날짜 조회
 			//검색 종류 확인
 			String rwDate = request.getParameter("date");
@@ -57,56 +58,60 @@ public class AjaxRewardController extends HttpServlet {
 			List<reviewVO> list = reviewDAO.selectVO(date);
 			System.out.println("넘겨 받은 날짜 List : " + list);
 			
-			//해당 월의 rvNo에서 높은 추천수인 rvNo번호 추출
-			int rvNo = 0;
-			int recNum = 0;
-			List<Integer> rwRvNo = new ArrayList<>();
-			int i;
-			for(i=0; i < list.size(); i++) {
-				rvNo = list.get(i).getRvNo();
-				recNum = recDAO.getRec(rvNo);
-				rwRvNo.add(i, recNum);
-			}
-			System.out.println("rwRvNo : " + rwRvNo);
-			
-			int largeRecNum = rwRvNo.get(0);
-			int rvNoLarge = list.get(0).getRvNo();
-			for(i=0; i < rwRvNo.size(); i++) {
-				if (rwRvNo.get(i) > largeRecNum) {
-					largeRecNum = rwRvNo.get(i);
-					rvNoLarge = list.get(i).getRvNo();
+			if(list.isEmpty()) {
+				System.out.println("list 없음!");
+			} else {
+				//해당 월의 rvNo에서 높은 추천수인 rvNo번호 추출
+				int rvNo = 0;
+				int recNum = 0;
+				List<Integer> rwRvNo = new ArrayList<>();
+				int i;
+				for(i=0; i < list.size(); i++) {
+					rvNo = list.get(i).getRvNo();
+					recNum = recDAO.getRec(rvNo);
+					rwRvNo.add(i, recNum);
 				}
+				System.out.println("rwRvNo : " + rwRvNo);
+				
+				int largeRecNum = rwRvNo.get(0);
+				int rvNoLarge = list.get(0).getRvNo();
+				for(i=0; i < rwRvNo.size(); i++) {
+					if (rwRvNo.get(i) > largeRecNum) {
+						largeRecNum = rwRvNo.get(i);
+						rvNoLarge = list.get(i).getRvNo();
+					}
+				}
+				System.out.println("largeRwNo : " + largeRecNum);
+				System.out.println("rvNoLarge : " + rvNoLarge);
+				
+				//rvNo(추천수 높은 largeRvNo)로 listTot에서 vo 정보 받아오기
+				vo = listTotDAO.selectOne(rvNoLarge);
+				System.out.println("추천수 높은 vo : " +  vo);
+				
+				//rvRec, rvWarn 계산 처리 필요!!!=>request로 rvRec, rvWarn 넘겨주기 
+				//추천수 sum 보여주기 계산
+				int selRvNo = vo.getRvNo();
+				System.out.println("> 이달의 리뷰 selRvNo : " + selRvNo);
+				
+				int rvRec = recDAO.recSum(selRvNo);
+				System.out.println("::recDAO.recSum rvRec : " + rvRec);
+				if (rvRec == -1) {
+					rvRec = 0;
+				}
+				vo.setRvRec(rvRec);
+				
+				//신고수 sum 보여주기 계산
+				int rvWarn = warnDAO.warnSum(rvNo);
+				System.out.println("::warnDAO.warnSum rvWarn : " + rvWarn);
+				if (rvWarn == -1) {
+					rvWarn = 0;
+				}
+				vo.setRvWarn(rvWarn);
+				System.out.println("<추천/신고 계산>추천수 높은 vo : " + vo);
+				
+				request.setAttribute("vo", vo);
 			}
-			System.out.println("largeRwNo : " + largeRecNum);
-			System.out.println("rvNoLarge : " + rvNoLarge);
-			
-			//rvNo(추천수 높은 largeRvNo)로 listTot에서 vo 정보 받아오기
-			listTotVO vo = listTotDAO.selectOne(rvNoLarge);
-			System.out.println("추천수 높은 vo : " +  vo);
-			
-			//rvRec, rvWarn 계산 처리 필요!!!=>request로 rvRec, rvWarn 넘겨주기 
-			//추천수 sum 보여주기 계산
-			int selRvNo = vo.getRvNo();
-			System.out.println("> 이달의 리뷰 selRvNo : " + selRvNo);
-			
-			int rvRec = recDAO.recSum(selRvNo);
-			System.out.println("::recDAO.recSum rvRec : " + rvRec);
-			if (rvRec == -1) {
-				rvRec = 0;
-			}
-			vo.setRvRec(rvRec);
-			
-			//신고수 sum 보여주기 계산
-			int rvWarn = warnDAO.warnSum(rvNo);
-			System.out.println("::warnDAO.warnSum rvWarn : " + rvWarn);
-			if (rvWarn == -1) {
-				rvWarn = 0;
-			}
-			vo.setRvWarn(rvWarn);
-			System.out.println("<추천/신고 계산>추천수 높은 vo : " + vo);
-			
-			request.setAttribute("vo", vo);
-			
+			System.out.println("vo : " + vo);	
 			//JSON 형식 문자열 만들기
 			// { "list" : [ {},{},{}, ..., {}] }
 			String result = makeJson(vo);
@@ -128,6 +133,10 @@ public class AjaxRewardController extends HttpServlet {
 	private String makeJson(listTotVO vo) {
 		//JSON 형식 문자열 만들기
 		StringBuilder result = new StringBuilder();
+		if (vo == null) {
+			result.append("null");
+			return result.toString();
+		}
 		result.append("{ \"vo\" : [");
 		
 		result.append("{");
