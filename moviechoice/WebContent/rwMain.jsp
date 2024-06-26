@@ -243,7 +243,7 @@ function selectCategory(frm) {
 		<table border frame=void>
 			<thead>
 				<tr>
-					<th>영화</th>
+					<th width="30%">영화</th>
 					<th colspan="4">리뷰</th>
 				</tr>
 			</thead>
