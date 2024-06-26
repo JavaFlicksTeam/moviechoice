@@ -23,8 +23,8 @@
 	Date now = new Date();
 	
 	String rvDate = sdf.format(now);
+// 	rvDate = "202404";
 	System.out.println("rvDate : " + rvDate);
-	
 	
 	//listTotVO의 전체 목록 리뷰 작성된 rvDate만 추출
 	List<listTotVO> listAll = listTotDAO.getList();
@@ -79,50 +79,55 @@
 	int i;
 	List<Integer> rwRvNo = new ArrayList<>();
 	
-	for(i=0; i < list.size(); i++) {
-		rvNo = list.get(i).getRvNo();
-		recNum = recDAO.getRec(rvNo);
-		rwRvNo.add(i, recNum);
-	}
-	System.out.println("rwRvNo : " + rwRvNo);
-	
-	int largeRecNum = rwRvNo.get(0);
-	int rvNoLarge = list.get(0).getRvNo();
-	for(i=0; i < rwRvNo.size(); i++) {
-		if (rwRvNo.get(i) > largeRecNum) {
-			largeRecNum = rwRvNo.get(i);
-			rvNoLarge = list.get(i).getRvNo();
+	if (list.size() == 0) {
+		System.out.println("리뷰 vo가 없음!");
+		request.setAttribute("rwVo", null);
+	} else {
+		for(i=0; i < list.size(); i++) {
+			rvNo = list.get(i).getRvNo();
+			recNum = recDAO.getRec(rvNo);
+			rwRvNo.add(i, recNum);
 		}
+		System.out.println("rwRvNo : " + rwRvNo);
+		
+		int largeRecNum = rwRvNo.get(0);
+		int rvNoLarge = list.get(0).getRvNo();
+		for(i=0; i < rwRvNo.size(); i++) {
+			if (rwRvNo.get(i) > largeRecNum) {
+				largeRecNum = rwRvNo.get(i);
+				rvNoLarge = list.get(i).getRvNo();
+			}
+		}
+		System.out.println("largeRwNo : " + largeRecNum);
+		System.out.println("rvNoLarge : " + rvNoLarge);
+		
+		//rvNo(추천수 높은 largeRvNo)로 listTot에서 vo 정보 받아오기
+		listTotVO vo = listTotDAO.selectOne(rvNoLarge);
+		System.out.println("추천수 높은 vo : " +  vo);
+		
+		//rvRec, rvWarn 계산 처리 필요!!!=>request로 rvRec, rvWarn 넘겨주기 
+		//추천수 sum 보여주기 계산
+		int selRvNo = vo.getRvNo();
+		System.out.println("> 이달의 리뷰 selRvNo : " + selRvNo);
+		
+		int rvRec = recDAO.recSum(selRvNo);
+		System.out.println("::recDAO.recSum rvRec : " + rvRec);
+		if (rvRec == -1) {
+			rvRec = 0;
+		}
+		vo.setRvRec(rvRec);
+		
+		//신고수 sum 보여주기 계산
+		int rvWarn = warnDAO.warnSum(rvNo);
+		System.out.println("::warnDAO.warnSum rvWarn : " + rvWarn);
+		if (rvWarn == -1) {
+			rvWarn = 0;
+		}
+		vo.setRvWarn(rvWarn);
+		System.out.println("<추천/신고 계산>추천수 높은 vo : " + vo);
+	
+		request.setAttribute("rwVo", vo);
 	}
-	System.out.println("largeRwNo : " + largeRecNum);
-	System.out.println("rvNoLarge : " + rvNoLarge);
-	
-	//rvNo(추천수 높은 largeRvNo)로 listTot에서 vo 정보 받아오기
-	listTotVO vo = listTotDAO.selectOne(rvNoLarge);
-	System.out.println("추천수 높은 vo : " +  vo);
-	
-	//rvRec, rvWarn 계산 처리 필요!!!=>request로 rvRec, rvWarn 넘겨주기 
-	//추천수 sum 보여주기 계산
-	int selRvNo = vo.getRvNo();
-	System.out.println("> 이달의 리뷰 selRvNo : " + selRvNo);
-	
-	int rvRec = recDAO.recSum(selRvNo);
-	System.out.println("::recDAO.recSum rvRec : " + rvRec);
-	if (rvRec == -1) {
-		rvRec = 0;
-	}
-	vo.setRvRec(rvRec);
-	
-	//신고수 sum 보여주기 계산
-	int rvWarn = warnDAO.warnSum(rvNo);
-	System.out.println("::warnDAO.warnSum rvWarn : " + rvWarn);
-	if (rvWarn == -1) {
-		rvWarn = 0;
-	}
-	vo.setRvWarn(rvWarn);
-	System.out.println("<추천/신고 계산>추천수 높은 vo : " + vo);
-
-	request.setAttribute("rwVo", vo);
 %>
 <!DOCTYPE html>
 <html>
@@ -134,6 +139,13 @@
 <link rel="stylesheet" href="css/rwMain.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
+// var reviewOneElement = document.getElementById("rvNick").value;
+// console.log("reviewOneElement : " + reviewOneElement);
+// if (reviewOneElement !== null) {
+//     reviewOneElement.innerHTML = "<tr><td colspan='11'>검색 결과가 없습니다.</td></tr>";
+// } else {
+//     console.log("reviewOne 요소가 존재하지 않습니다.");
+// }
 
 function selectCategory(frm) {
 	var checkCategory = frm.rwDate.value;
@@ -154,46 +166,50 @@ function selectCategory(frm) {
 		    let str = "";
 		    if (respData.vo.length === 0) {
                 // 검색 결과가 없을 때
-                htmltag += "<tr><td colspan='11'>검색 결과가 없습니다.</td></tr>";
+                str += "<tr><td colspan='11'>검색 결과가 없습니다.</td></tr>";
             } else {
                 // 검색 결과가 있을 때
-                }
-		    for (let member of respData.vo) {
-		        console.log(">> 리뷰 내용 실행");
-		        str += "<tr>";
-		        str += "<td id=\"mvTitle\"  width='20%' height='60px'>" + member.mvTitle + "</td>";
-		        str += "<td id=\"rvTitle\" colspan=\"4\">" + member.rvTitle + "</td>";
-		        str += "</tr>";
-		        str += "<tr>";
-		        str += "<td rowspan=\"2\"><img src=\"img/" + member.mvPoster + "\" alt=\"포스터\" width=\"300px\"></td>";
-		        str += "<td id=\"rvNick\" width='30%' height='30px'>" + member.rvNick + "</td>";
-		        str += "<td id=\"rvDate\" width='30%'>" + member.rvDate + "</td>";
-		        str += "<td id=\"btn\" width='10%'>";
-		        str += "<input class='up_button' type=\"button\" value=\"추천\">" + member.rvRec;
-		        str += "</td>";
-		        str += "<td id=\"btn\" width='10%'>";
-		        str += "<input class='up_button' type=\"button\" value=\"신고\">" + member.rvWarn;
-	        	str += "</td>";
-		        str += "</tr>";
-		        str += "<tr>";
-		        str += "<td id=\"rvContent\" colspan=\"4\">" + member.rvContent + "</td>";
-		        str += "</tr>";
-		    }
-		    	$("#reviewOne").html(str);	
+			    for (let member of respData.vo) {
+			    	 console.log(">> 리뷰 내용 실행");
+	                 console.log(member);
+	                 if (member.length === 0) {
+	                 	console.log("이달의 리뷰 없음");
+	                 	str += "<tr><td colspan='11'>검색 결과가 없습니다.</td></tr>";
+		                break;
+	                 }
+			        console.log(">> 리뷰 내용 실행");
+			        str += "<tr>";
+			        str += "<td id=\"mvTitle\"  width='20%' height='60px'>" + member.mvTitle + "</td>";
+			        str += "<td id=\"rvTitle\" colspan=\"4\">" + member.rvTitle + "</td>";
+			        str += "</tr>";
+			        str += "<tr>";
+			        str += "<td rowspan=\"2\"><img src=\"img/" + member.mvPoster + "\" alt=\"포스터\" width=\"300px\"></td>";
+			        str += "<td id=\"rvNick\" width='30%' height='30px'>" + member.rvNick + "</td>";
+			        str += "<td id=\"rvDate\" width='30%'>" + member.rvDate + "</td>";
+			        str += "<td id=\"btn\" width='10%'>";
+			        str += "<input class='up_button' type=\"button\" value=\"추천\">" + member.rvRec;
+			        str += "</td>";
+			        str += "<td id=\"btn\" width='10%'>";
+			        str += "<input class='up_button' type=\"button\" value=\"신고\">" + member.rvWarn;
+		        	str += "</td>";
+			        str += "</tr>";
+			        str += "<tr>";
+			        str += "<td id=\"rvContent\" colspan=\"4\">" + member.rvContent + "</td>";
+			        str += "</tr>";
+			    }
+			    	$("#reviewOne").html(str);	
+            }
 			
 		}, 
-		error: function(jqXHR, textStatus, errorThrown) {
-            alert("삭제 요청 실패: " + errorThrown);
-        }
-// 		error : function(jqXHR, textStatus, errorThrown){
-// 			alert("Ajax 처리 실패 : \n"
-// 					+ "jqXHR.readyState : " + jqXHR.readyState + "\n"
-// 					+ "textStatus : " + textStatus + "\n"
-// 					+ "errorThrown : " + errorThrown);
-// 		},
-// 		complete : function(){
-// 			alert(":: complete 실행");
-// 		}   
+		error : function(jqXHR, textStatus, errorThrown){
+			alert("Ajax 처리 실패 : \n"
+					+ "jqXHR.readyState : " + jqXHR.readyState + "\n"
+					+ "textStatus : " + textStatus + "\n"
+					+ "errorThrown : " + errorThrown);
+		},
+		complete : function(){
+			alert(":: complete 실행");
+		}   
 	});
 	
 }
@@ -213,8 +229,6 @@ function selectCategory(frm) {
 	<div class="box">
 	<div class="innerbox">
 	<div class="content">
-<!-- 	<form> -->
-<!-- 	<form method="post"> -->
 <!-- 	<form action="ajaxRewardController?action=rwMainAjax" method="post"> -->
 	<form method="post">
 		<select class="select" id="rwDate" name="rwDate">
@@ -223,7 +237,6 @@ function selectCategory(frm) {
 				<option value="${date}">${date}</option>
 			</c:forEach>
 		</select>
-<!-- 		<input class="searchbtn" type="submit" value="검색"/> -->
 		<input class="searchbtn" type="button" value="검색" onclick="selectCategory(this.form)"/>
 		<input type="hidden" name="action" value="rwMainAjax">
 	</form>
@@ -234,15 +247,21 @@ function selectCategory(frm) {
 					<th colspan="4">리뷰</th>
 				</tr>
 			</thead>
-			<tbody  id="reviewOne">
+			<c:if test="${empty rwVo}">
+			<tbody id="reviewOne">
+				<tr><td colspan="2">해당 리뷰가 없습니다.</td></tr>
+			</tbody>
+			</c:if>
+			<c:if test="${not empty rwVo}">
+			<tbody id="reviewOne">
 				<tr>
 					<td id="mvTitle" width="20%" height="60px">${rwVo.mvTitle}</td>
 					<td id="rvTitle" colspan="4">${rwVo.rvTitle }</td>
 				</tr>
 				<tr>
 					<td rowspan="2"><img src="img/${rwVo.mvPoster }" alt="포스터" width="300px"></td>
-					<td id="rvNick" width="30%" height="30px">작성자 | ${rwVo.rvNick }</td>
-					<td id="rvDate" width="30%">작성일 | ${rwVo.rvDate }</td>
+					<td id="rvNick" width="30%" height="30px">${rwVo.rvNick }</td>
+					<td id="rvDate" width="30%">${rwVo.rvDate }</td>
 					<td id="btn" width="10%">
 						<input class="up_button" type="button" value="추천">
 						${rwVo.rvRec}
@@ -256,6 +275,7 @@ function selectCategory(frm) {
 					<td id="rvContent" colspan="4">${rwVo.rvContent }</td>
 				</tr>
 			</tbody>
+			</c:if>
 		</table>
 	</div>
 	</div>
