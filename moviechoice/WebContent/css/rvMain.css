@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.body {
+	margin-left : auto;
+	margin-top : 100px;
+	margin-right : auto;
+ 	position: relative;
+  	width: 60%;
+  	height: 60%;
+/*   	align-content: center; */
+  	
+}
+.body:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+	
+
+	table {
+		width : 90%;
+		border: 1px solid black;
+	}
+	
+	.link:hover {
+		color:  #56BEC0;
+	 	font-weight: bold;
+	}
+/* 	.poster { */
+/* 	width: 50%; */
+/* 	} */
+/* 	#rvTitle:hover { */
+/* 		color: #56BEC0; */
+/* 	 	font-weight: bold; */
+/* 	} */
+	
+	/* #reviewOne.tr {
+		width : 100px;
+	}
+	
+	.recNo { padding-top : 0; }
+	
+	#rvDetail:hover {
+	 	background-color: yellow;
+	 	color:  #56BEC0;
+	 	font-weight: bold;
+	}
+	
+	#iconRec {
+		padding: 0;
+	} */
