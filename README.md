@@ -77,11 +77,11 @@
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/6ea52a5b-2a95-42d7-b268-f1ec6ce0abe6)
   1. 리뷰 모음 페이지
 
-  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/32324980-250a-49c5-8820-cf98d1c8c0c1)
-  2. 영화 검색 
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/9269c4db-cadd-498b-ab7a-2a457ca4b14a)
+  2. 리뷰 상세 
 
-  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/96a57a9f-eb25-46fa-821a-937e5ddf94d9)
-  3. 영화 상세 정보 및 리뷰
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/5ff44ecc-db60-46ce-b477-ca1b3761b910)
+  3. 리뷰 작성 및 수정
 </details>
 
 
