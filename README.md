@@ -114,5 +114,19 @@
   5. 이달의 리뷰 페이지
 </details>
 
+<details>
+  <summary>평론가 관리</summary>
 
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/ba3788c8-51b5-4425-945a-54ba840fbc6d)
+  
+  1. 평론가 페이지
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/8b37021f-e001-41b2-b558-70ea4100b967)
+
+  2. 평론가 신청 (회원가입 혹은 마이페이지에서 신청)
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/667808b6-346f-4ccc-b94e-a914c6993643)
+  
+  3. 평론가 탈퇴 신청 (QnA에서 신청 후, 관리자에 의해 탈퇴)
+</details>
 
