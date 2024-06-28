@@ -130,3 +130,38 @@
   3. 평론가 탈퇴 신청 (QnA에서 신청 후, 관리자에 의해 탈퇴)
 </details>
 
+<details>
+  <summary>관리자</summary>
+
+ ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/5848d37e-7d4d-43c9-90cd-a1e945ce41e1)
+
+ ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/3144a014-2f12-439d-8dca-fcbe3619e9c6)
+
+  1. 영화목록 관리 
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/9e1d4b77-eae2-4ce8-ad56-90ac33998124)
+  
+  2. 리뷰 관리
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/147e5dca-f697-4154-b232-03f9cab1760a)
+  
+  3. 자유게시판 관리
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/9a060d83-3f47-41a0-85aa-5b82a06e7bff)
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/a09d96fc-5cdc-406d-8d20-a63bc77f08b6)
+
+  4. QnA 관리 (영화 등업 신청, 평론가 탈퇴 신청 등)
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/8de718c5-d10a-4dbf-8904-96336dea24e6)
+
+  5. 평론가 관리 (관리자가 승인, 탈퇴 처리 페이지)
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/25da2d04-cf37-4dbf-9fab-eeab67a7dc46)
+
+  6. 회원 관리 (관리자가 탈퇴 및 신고 관리)
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/dabda164-c4f6-47f1-987f-3182b3af76e3)
+
+  7. 관리자 페이지 (관리자가 영화, 리뷰, 회원 관리 하는 메인 페이지)
+</details>
