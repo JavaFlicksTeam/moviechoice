@@ -1,10 +1,10 @@
 <%@page import="com.project.dao.AccountDAO"%>
 <%@page import="com.project.vo.AccountVO"%>
 <%@page import="com.sun.nio.sctp.PeerAddressChangeNotification"%>
-<%@page import="com.mystudy.model.vo.postCommentVO"%>
+<%@page import="com.project.model.vo.postCommentVO"%>
 <%@page import="java.util.List"%>
-<%@page import="com.mystudy.model.dao.postDAO"%>
-<%@page import="com.mystudy.model.vo.postVO"%>
+<%@page import="com.project.model.dao.postDAO"%>
+<%@page import="com.project.model.vo.postVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 

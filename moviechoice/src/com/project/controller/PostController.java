@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.postDAO;
-import com.mystudy.model.vo.postVO;
-import com.mystudy.post.common.Paging;
+import com.project.model.dao.postDAO;
+import com.project.model.vo.postVO;
+import com.project.post.common.Paging;
 
 @WebServlet("/postController")
 public class PostController extends HttpServlet { 

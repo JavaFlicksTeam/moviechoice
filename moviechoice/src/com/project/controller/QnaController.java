@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.qnaDAO;
-import com.mystudy.model.vo.qnaVO;
-import com.mystudy.post.common.Paging;
+import com.project.model.dao.qnaDAO;
+import com.project.model.vo.qnaVO;
+import com.project.post.common.Paging;
 
 @WebServlet("/qnaController")
 public class QnaController extends HttpServlet {

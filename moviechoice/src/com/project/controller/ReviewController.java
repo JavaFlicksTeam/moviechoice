@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.dao.listTotDAO;
-import com.mystudy.model.dao.recDAO;
-import com.mystudy.model.dao.reviewDAO;
-import com.mystudy.model.dao.warnDAO;
-import com.mystudy.model.vo.listTotVO;
-import com.mystudy.model.vo.movieVO;
+import com.project.model.dao.listTotDAO;
+import com.project.model.dao.recDAO;
+import com.project.model.dao.reviewDAO;
+import com.project.model.dao.warnDAO;
+import com.project.model.vo.listTotVO;
+import com.project.model.vo.movieVO;
 import com.project.mybatis.DBService;
 import com.project.review.paging.Paging;
 

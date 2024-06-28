@@ -15,12 +15,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.listTotDAO;
-import com.mystudy.model.dao.recDAO;
-import com.mystudy.model.dao.reviewDAO;
-import com.mystudy.model.dao.warnDAO;
-import com.mystudy.model.vo.listTotVO;
-import com.mystudy.model.vo.reviewVO;
+import com.project.model.dao.listTotDAO;
+import com.project.model.dao.recDAO;
+import com.project.model.dao.reviewDAO;
+import com.project.model.dao.warnDAO;
+import com.project.model.vo.listTotVO;
+import com.project.model.vo.reviewVO;
 
 //@WebServlet("/rewardController")
 public class RewardController extends HttpServlet {

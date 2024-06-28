@@ -1,10 +1,10 @@
-<%@page import="com.mystudy.model.dao.qnaDAO"%>
+<%@page import="com.project.model.dao.qnaDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
-	<jsp:useBean id="qo" class="com.mystudy.model.vo.qnaVO" />
+	<jsp:useBean id="qo" class="com.project.model.vo.qnaVO" />
 	<jsp:setProperty property="*" name="qo"/>
 <%
 	System.out.println("> update_ok.jsp qo : " + qo);

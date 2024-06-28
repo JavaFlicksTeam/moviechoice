@@ -10,13 +10,13 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias alias="reviewVO" type="com.mystudy.model.vo.reviewVO"/>
-		<typeAlias alias="movieVO" type="com.mystudy.model.vo.movieVO"/>
+		<typeAlias alias="reviewVO" type="com.project.model.vo.reviewVO"/>
+		<typeAlias alias="movieVO" type="com.project.model.vo.movieVO"/>
 		<typeAlias alias="accountVO" type="com.project.vo.AccountVO"/>
 		<typeAlias alias="criticVO" type="com.project.vo.CriticVO"/>
-		<typeAlias alias="listTotVO" type="com.mystudy.model.vo.listTotVO"/>
-		<typeAlias alias="recVO" type="com.mystudy.model.vo.recVO"/>
-		<typeAlias alias="warnVO" type="com.mystudy.model.vo.warnVO"/>
+		<typeAlias alias="listTotVO" type="com.project.model.vo.listTotVO"/>
+		<typeAlias alias="recVO" type="com.project.model.vo.recVO"/>
+		<typeAlias alias="warnVO" type="com.project.model.vo.warnVO"/>
 	</typeAliases>
 
   <environments default="development">

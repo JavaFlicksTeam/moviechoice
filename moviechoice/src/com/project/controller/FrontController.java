@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.criticDAO;
-import com.mystudy.model.dao.movieDAO;
-import com.mystudy.model.dao.reviewDAO;
-import com.mystudy.model.vo.criticVO;
-import com.mystudy.model.vo.movieVO;
-import com.mystudy.model.vo.reviewVO;
+import com.project.model.dao.criticDAO;
+import com.project.model.dao.movieDAO;
+import com.project.model.dao.reviewDAO;
+import com.project.model.vo.criticVO;
+import com.project.model.vo.movieVO;
+import com.project.model.vo.reviewVO;
 
 @WebServlet("/controller")
 public class FrontController extends HttpServlet {

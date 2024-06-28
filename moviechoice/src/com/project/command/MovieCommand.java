@@ -9,9 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import com.mystudy.model.dao.movieDAO;
-import com.mystudy.model.vo.movieVO;
+import com.project.model.dao.movieDAO;
+import com.project.model.vo.movieVO;
 
 public class MovieCommand implements Command{
 	

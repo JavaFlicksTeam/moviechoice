@@ -1,4 +1,4 @@
-package com.mystudy.model.vo;
+package com.project.model.vo;
 
 public class recVO {
 	private int idx;

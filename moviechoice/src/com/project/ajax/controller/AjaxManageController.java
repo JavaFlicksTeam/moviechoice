@@ -16,20 +16,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.mystudy.model.dao.listTotDAO;
-import com.mystudy.model.dao.movieDAO;
-import com.mystudy.model.dao.postDAO;
-import com.mystudy.model.dao.qnaDAO;
-import com.mystudy.model.dao.reviewDAO;
-import com.mystudy.model.vo.listTotVO;
-import com.mystudy.model.vo.movieVO;
-import com.mystudy.model.vo.postCommentVO;
-import com.mystudy.model.vo.postVO;
-import com.mystudy.model.vo.qnaVO;
-import com.mystudy.model.vo.reviewVO;
-import com.mystudy.post.common.Paging;
 import com.project.dao.AccountDAO;
 import com.project.dao.AdminDAO;
+import com.project.model.dao.listTotDAO;
+import com.project.model.dao.movieDAO;
+import com.project.model.dao.postDAO;
+import com.project.model.dao.qnaDAO;
+import com.project.model.dao.reviewDAO;
+import com.project.model.vo.listTotVO;
+import com.project.model.vo.movieVO;
+import com.project.model.vo.postCommentVO;
+import com.project.model.vo.postVO;
+import com.project.model.vo.qnaVO;
+import com.project.model.vo.reviewVO;
+import com.project.post.common.Paging;
 import com.project.vo.AccountVO;
 
 @WebServlet("/ajaxManageController")

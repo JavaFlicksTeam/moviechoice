@@ -4,14 +4,14 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="inquiry">
 
-	<select id="ione" parameterType="int" resultType="com.mystudy.model.vo.inquiryVO">
+	<select id="ione" parameterType="int" resultType="com.project.model.vo.inquiryVO">
 			SELECT *
 			FROM INQUIRY
 			WHERE QA_NO = #{qaNo}
 	</select>
 	
 	<!-- INQUIRY 입력 -->
-	<insert id="insert" parameterType="com.mystudy.model.vo.inquiryVO">
+	<insert id="insert" parameterType="com.project.model.vo.inquiryVO">
 		INSERT INTO INQUIRY
 			       (IQ_NO, QA_NO, IQ_CONTENT, IQ_DATE)
 			VALUES (INQUIRY_SEQ.NEXTVAL, #{qaNo}, #{iqContent}, SYSDATE) 

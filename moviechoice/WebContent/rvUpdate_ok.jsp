@@ -1,12 +1,12 @@
-<%@page import="com.mystudy.model.vo.reviewVO"%>
-<%@page import="com.mystudy.model.vo.listTotVO"%>
-<%@page import="com.mystudy.model.dao.reviewDAO"%>
+<%@page import="com.project.model.vo.reviewVO"%>
+<%@page import="com.project.model.vo.listTotVO"%>
+<%@page import="com.project.model.dao.reviewDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	request.setCharacterEncoding("UTF-8");
+request.setCharacterEncoding("UTF-8");
 %>
-	<jsp:useBean id="update" class="com.mystudy.model.vo.reviewVO"/>
+	<jsp:useBean id="update" class="com.project.model.vo.reviewVO"/>
 	<jsp:setProperty property="*" name="update"/>
 	<jsp:setProperty property="no" name="update" value="${upVo.no }"/>
 	<jsp:setProperty property="rvNick" name="update" value="${upVo.rvNick }"/>
