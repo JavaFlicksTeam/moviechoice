@@ -91,7 +91,7 @@
 </details>
 
 <details>
-  <summary>자유게시판 및 QnA 관리</summary>
+  <summary>자유게시판, QnA 및 이달의 리뷰 관리</summary>
 
  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/26f6b43e-9f00-4708-9595-9b4c1ca7c9bc)
   
@@ -104,6 +104,14 @@
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/699035fe-8e65-478b-bca9-9fe5197cbacc)
   
   3. 자유게시판 게시물 작성 및 수정
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/55a5f418-3eb6-430e-9a50-04df7bcd41ba)
+
+  4. QnA 페이지
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/7a4f5670-a9d4-4f14-b045-5b52b5788dd3)
+
+  5. 이달의 리뷰 페이지
 </details>
 
 
