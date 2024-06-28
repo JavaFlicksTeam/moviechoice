@@ -45,13 +45,12 @@
 + WebContent
 
 ## 4. 프로젝트 기능 및 실행 화면
-+ 
++ 로그인, 회원가입 
 <details>
   <summary>실행 화면 보기</summary>
   
-  ![실행 화면](이미지_파일_경로)
+  ![실행 화면](![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/17aaa790-e034-4a9b-bd87-889343f71329))
   
-  실행 화면에 대한 설명이나 추가 정보를 여기에 추가할 수 있습니다.
 </details>
 
 ### 1. login, join
