@@ -1,5 +1,6 @@
 # moviechoice - 자바 웹 프로젝트
 > 자바를 이용한 웹 사이트 입니다.
+
 ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/a94b0ada-604c-438a-aac3-2ff1d708faa1)
 
 
