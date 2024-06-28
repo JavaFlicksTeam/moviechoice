@@ -62,26 +62,48 @@
   <summary>영화 관리</summary>
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/a94b0ada-604c-438a-aac3-2ff1d708faa1)
+  
   1. 영화 메인 페이지
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/32324980-250a-49c5-8820-cf98d1c8c0c1)
-   2. 영화 검색 
+  
+  2. 영화 검색 
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/96a57a9f-eb25-46fa-821a-937e5ddf94d9)
-   3. 영화 상세 정보 및 리뷰
+  
+  3. 영화 상세 정보 및 리뷰
 </details>
 
 <details>
   <summary>리뷰 관리</summary>
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/6ea52a5b-2a95-42d7-b268-f1ec6ce0abe6)
+  
   1. 리뷰 모음 페이지
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/9269c4db-cadd-498b-ab7a-2a457ca4b14a)
-   2. 리뷰 상세 
+  
+  2. 리뷰 상세 
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/5ff44ecc-db60-46ce-b477-ca1b3761b910)
-   3. 리뷰 작성 및 수정
+  
+  3. 리뷰 작성 및 수정
+</details>
+
+<details>
+  <summary>자유게시판 및 QnA 관리</summary>
+
+ ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/26f6b43e-9f00-4708-9595-9b4c1ca7c9bc)
+  
+  1. 자유게시판 페이지
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/65b5878d-da82-4b9c-9403-df85bdc1e012)
+
+  2. 자유게시판 게시물 상세 
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/699035fe-8e65-478b-bca9-9fe5197cbacc)
+  
+  3. 자유게시판 게시물 작성 및 수정
 </details>
 
 
