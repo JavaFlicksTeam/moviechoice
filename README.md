@@ -52,9 +52,23 @@
   1. 로그인, 회원가입
 
 ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/49dfb95f-0605-4bac-91bb-0414dc006d59)
+
 ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/80f273d3-12e6-4381-9028-ede6384f2527)
 
   2. 마이페이지
+</details>
+
+<details>
+  <summary>영화 관리</summary>
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/a94b0ada-604c-438a-aac3-2ff1d708faa1)
+  1. 영화 메인 페이지
+
+![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/32324980-250a-49c5-8820-cf98d1c8c0c1)
+  2. 영화 검색 
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/96a57a9f-eb25-46fa-821a-937e5ddf94d9)
+  3. 영화 상세 정보 및 리뷰
 </details>
 
 
