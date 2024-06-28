@@ -5,7 +5,7 @@
 <mapper namespace="qna">
 	
 	<!-- QA 1개 조회 -->
-	<select id="one" resultType="com.mystudy.model.vo.qnaVO">
+	<select id="one" resultType="com.project.model.vo.qnaVO">
 		SELECT Q.*, A.NICK, A.CRITIC_CHECK
 		FROM QA Q, ACCOUNT A
 		WHERE Q.NO = A.NO
@@ -13,7 +13,7 @@
 	</select>
 	
 	<!-- 나의 QA 조회 -->
-	<select id="getMyQa" parameterType="int" resultType="com.mystudy.model.vo.qnaVO">
+	<select id="getMyQa" parameterType="int" resultType="com.project.model.vo.qnaVO">
 		SELECT Q.*, A.ID, A.CRITIC_CHECK
 		FROM QA Q, ACCOUNT A
 		WHERE Q.NO = A.NO
@@ -26,7 +26,7 @@
 	</select>
 	
 	<!-- 페이지에 해당하는 QA 조회 -->
-	<select id="list" parameterType="map" resultType="com.mystudy.model.vo.qnaVO">
+	<select id="list" parameterType="map" resultType="com.project.model.vo.qnaVO">
 	    <![CDATA[
 		    SELECT Q.*, A.NICK, A.CRITIC_CHECK
 		    FROM (
@@ -45,7 +45,7 @@
 </select>
 	
 	<!-- 	카테고리별 게시글 동적 검색 -->
-	<select id="search" parameterType="map" resultType="com.mystudy.model.vo.qnaVO">
+	<select id="search" parameterType="map" resultType="com.project.model.vo.qnaVO">
 	    SELECT QA.*, A.NICK
 	    FROM QA
 	    LEFT JOIN ACCOUNT A ON QA.NO = A.NO
@@ -131,14 +131,14 @@
 	</select>
 	
 	<!-- QA 입력 -->
-	<insert id="insert" parameterType="com.mystudy.model.vo.qnaVO">
+	<insert id="insert" parameterType="com.project.model.vo.qnaVO">
 		INSERT INTO QA
 			       (QA_NO, NO, QA_CONTENT, QA_DATE, QA_CATEGORY, QA_TITLE)
 			VALUES (QA_SEQ.NEXTVAL, #{no}, #{qaContent}, SYSDATE, #{qaCategory},#{qaTitle}) 
 	</insert>
 	
 	<!-- QA 수정 -->
-	<update id="update" parameterType="com.mystudy.model.vo.qnaVO">
+	<update id="update" parameterType="com.project.model.vo.qnaVO">
 		UPDATE QA
 			SET  QA_TITLE = #{qaTitle}
 			    , QA_CONTENT = #{qaContent}

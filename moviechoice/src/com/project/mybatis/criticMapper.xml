@@ -4,21 +4,21 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="critic">
 	<!-- 전문가 한명 조회 -->
-	<select id="cone" resultType="com.mystudy.model.vo.criticVO">
+	<select id="cone" resultType="com.project.model.vo.criticVO">
 		SELECT *
 		FROM CRITIC 
 		WHERE No = #{no}
 	</select>
 	
 	<!-- 전문가 목록 전체 조회 -->
-	<select id="all" resultType="com.mystudy.model.vo.criticVO">
+	<select id="all" resultType="com.project.model.vo.criticVO">
 		SELECT A.*, C.*
 		FROM ACCOUNT A, CRITIC C
 		WHERE A.NO = C.NO
 	</select>
 	
 	<!-- 	전문가 한명 정보 조회 -->
-	<select id="one" resultType="com.mystudy.model.vo.criticVO">
+	<select id="one" resultType="com.project.model.vo.criticVO">
 		SELECT A.NO, A.NAME, C.COMPANY, C.CAREER, M.MV_NO, R.RV_NICK, R.RV_TITLE,
        					    R.RV_CONTENT, R.RV_DATE
 		FROM ACCOUNT A, CRITIC C, REVIEW R, MOVIE M
@@ -38,7 +38,7 @@
   	</select>
 	
 	<!-- 전문가 정보 업데이트 -->
-	<update id="update" parameterType="com.mystudy.model.vo.criticVO"> 
+	<update id="update" parameterType="com.project.model.vo.criticVO"> 
 		UPDATE CRITIC
 		SET CAREER = #{career},
     	COMPANY = #{company},
@@ -53,7 +53,7 @@
 	</delete>
 	
 	<!-- 계정 번호 받아서 전문가 이름 찾기 -->
-	<select id="cname" resultType="com.mystudy.model.vo.criticVO">
+	<select id="cname" resultType="com.project.model.vo.criticVO">
 		SELECT A.NAME
 		FROM CRITIC C, ACCOUNT A
 		WHERE A.No = C.NO
@@ -62,14 +62,14 @@
 	
 	<!-- CRITICAPPLY 테이블 -->
 	<!-- 전문가 승인 대기 목록 전체 조회 -->
-	<select id="allApply" resultType="com.mystudy.model.vo.criticVO">
+	<select id="allApply" resultType="com.project.model.vo.criticVO">
 		SELECT A.*, C.*
 		FROM ACCOUNT A, CRITICAPPLY C
 		WHERE A.NO = C.NO
 	</select>
 	
 	<!-- 전문가 신청 승인 CRITICAPPLY 테이블로 보내기 -->
-	<insert id="insertApply" parameterType="com.mystudy.model.vo.criticVO">
+	<insert id="insertApply" parameterType="com.project.model.vo.criticVO">
 		INSERT INTO CRITICAPPLY (NO, COMPANY, CAREER, FILENAME)
 		VALUES (#{no}, #{company}, #{career}, #{filename})
 	</insert>
