@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.dao.movieDAO;
-import com.mystudy.model.dao.reviewDAO;
-import com.mystudy.model.vo.listTotVO;
+import com.project.model.dao.movieDAO;
+import com.project.model.dao.reviewDAO;
+import com.project.model.vo.listTotVO;
 import com.project.mybatis.DBService;
-import com.project.review.paging.Paging;
+import com.project.paging.Paging;
 
 @WebServlet("/ajaxReviewController")
 public class AjaxReviewController extends HttpServlet {

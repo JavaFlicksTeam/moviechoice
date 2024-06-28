@@ -1,4 +1,4 @@
-package com.mystudy.model.dao;
+package com.project.model.dao;
 
 
 import java.util.HashMap;
@@ -10,9 +10,9 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.vo.postCommentVO;
-import com.mystudy.model.vo.postVO;
-import com.mystudy.model.vo.reviewVO;
+import com.project.model.vo.postCommentVO;
+import com.project.model.vo.postVO;
+import com.project.model.vo.reviewVO;
 import com.project.mybatis.DBService;
 
 

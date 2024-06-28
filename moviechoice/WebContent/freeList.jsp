@@ -1,4 +1,4 @@
-<%@page import="com.mystudy.model.vo.postVO"%>
+<%@page import="com.project.model.vo.postVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>

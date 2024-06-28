@@ -1,4 +1,4 @@
-package com.mystudy.model.vo;
+package com.project.model.vo;
 
 import java.io.Serializable;
 import java.sql.Date;

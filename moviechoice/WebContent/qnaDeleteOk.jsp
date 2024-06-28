@@ -1,5 +1,5 @@
-<%@page import="com.mystudy.model.vo.qnaVO"%>
-<%@page import="com.mystudy.model.dao.qnaDAO"%>
+<%@page import="com.project.model.vo.qnaVO"%>
+<%@page import="com.project.model.dao.qnaDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

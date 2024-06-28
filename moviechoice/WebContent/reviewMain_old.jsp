@@ -1,11 +1,11 @@
-<%@page import="com.mystudy.model.dao.listTotDAO"%>
-<%@page import="com.mystudy.model.vo.listTotVO"%>
-<%@page import="com.project.review.paging.Paging"%>
-<%@page import="com.mystudy.model.dao.reviewDAO"%>
+<%@page import="com.project.model.dao.listTotDAO"%>
+<%@page import="com.project.model.vo.listTotVO"%>
+<%@page import="com.project.paging.Paging"%>
+<%@page import="com.project.model.dao.reviewDAO"%>
 <%@page import="com.project.mybatis.DBService"%>
-<%@page import="com.mystudy.model.dao.movieDAO"%>
-<%@page import="com.mystudy.model.vo.movieVO"%>
-<%@page import="com.mystudy.model.vo.reviewVO"%>
+<%@page import="com.project.model.dao.movieDAO"%>
+<%@page import="com.project.model.vo.movieVO"%>
+<%@page import="com.project.model.vo.reviewVO"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

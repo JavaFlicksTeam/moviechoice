@@ -1,9 +1,9 @@
-package com.mystudy.model.dao;
+package com.project.model.dao;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.vo.inquiryVO;
-import com.mystudy.model.vo.qnaVO;
+import com.project.model.vo.inquiryVO;
+import com.project.model.vo.qnaVO;
 import com.project.mybatis.DBService;
 
 public class inquiryDAO {

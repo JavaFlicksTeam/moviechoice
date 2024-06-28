@@ -1,6 +1,6 @@
-<%@page import="com.mystudy.model.vo.postVO"%>
-<%@page import="com.mystudy.model.dao.warnDAO"%>
-<%@page import="com.mystudy.model.vo.listTotVO"%>
+<%@page import="com.project.model.vo.postVO"%>
+<%@page import="com.project.model.dao.warnDAO"%>
+<%@page import="com.project.model.vo.listTotVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

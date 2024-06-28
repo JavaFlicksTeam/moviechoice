@@ -1,7 +1,7 @@
-<%@page import="com.mystudy.model.vo.reviewVO"%>
-<%@page import="com.mystudy.model.dao.movieDAO"%>
-<%@page import="com.mystudy.model.vo.movieVO"%>
-<%@page import="com.mystudy.model.vo.postVO"%>
+<%@page import="com.project.model.vo.reviewVO"%>
+<%@page import="com.project.model.dao.movieDAO"%>
+<%@page import="com.project.model.vo.movieVO"%>
+<%@page import="com.project.model.vo.postVO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.project.mybatis.DBService"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>

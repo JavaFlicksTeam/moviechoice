@@ -3,9 +3,9 @@
 <%@page import="com.project.dao.AccountDAO"%>
 <%@page import="com.project.vo.AccountVO"%>
 <%@page import="java.util.List"%>
-<%@page import="com.mystudy.post.common.Paging"%>
-<%@page import="com.mystudy.model.dao.postDAO"%>
-<%@page import="com.mystudy.model.vo.postVO"%>
+<%@page import="com.project.post.common.Paging"%>
+<%@page import="com.project.model.dao.postDAO"%>
+<%@page import="com.project.model.vo.postVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

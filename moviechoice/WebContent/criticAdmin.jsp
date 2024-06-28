@@ -1,7 +1,7 @@
-<%@page import="com.mystudy.model.dao.criticDAO"%>
+<%@page import="com.project.model.dao.criticDAO"%>
 <%@page import="com.project.mybatis.DBService"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
-<%@page import="com.mystudy.model.vo.criticVO"%>
+<%@page import="com.project.model.vo.criticVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
