@@ -1,4 +1,4 @@
-# moviechoice - 자바 웹 프로젝트
+![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/98767339-791f-4397-84f4-8bce23001f5a)# moviechoice - 자바 웹 프로젝트
 > 자바를 이용한 영화 리뷰 웹 사이트 입니다.
 
 ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/a94b0ada-604c-438a-aac3-2ff1d708faa1)
@@ -64,11 +64,25 @@
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/a94b0ada-604c-438a-aac3-2ff1d708faa1)
   1. 영화 메인 페이지
 
-![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/32324980-250a-49c5-8820-cf98d1c8c0c1)
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/32324980-250a-49c5-8820-cf98d1c8c0c1)
   2. 영화 검색 
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/96a57a9f-eb25-46fa-821a-937e5ddf94d9)
   3. 영화 상세 정보 및 리뷰
 </details>
+
+<details>
+  <summary>리뷰 관리</summary>
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/6ea52a5b-2a95-42d7-b268-f1ec6ce0abe6)
+  1. 리뷰 모음 페이지
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/32324980-250a-49c5-8820-cf98d1c8c0c1)
+  2. 영화 검색 
+
+  ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/96a57a9f-eb25-46fa-821a-937e5ddf94d9)
+  3. 영화 상세 정보 및 리뷰
+</details>
+
 
 
