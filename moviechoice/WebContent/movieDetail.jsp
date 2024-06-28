@@ -9,7 +9,7 @@
 <%@page import="com.project.model.dao.recDAO"%>
 <%@page import="com.project.model.dao.listTotDAO"%>
 <%@page import="com.project.model.vo.listTotVO"%>
-<%@page import="com.project.review.paging.Paging"%>
+<%@page import="com.project.paging.Paging"%>
 <%@page import="com.project.model.dao.reviewDAO"%>
 <%@page import="com.project.model.vo.reviewVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

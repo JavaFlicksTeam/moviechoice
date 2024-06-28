@@ -18,7 +18,7 @@ import com.project.model.dao.warnDAO;
 import com.project.model.vo.listTotVO;
 import com.project.model.vo.movieVO;
 import com.project.mybatis.DBService;
-import com.project.review.paging.Paging;
+import com.project.paging.Paging;
 
 @WebServlet("/reviewController")
 public class ReviewController extends HttpServlet {
