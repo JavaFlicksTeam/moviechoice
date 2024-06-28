@@ -6,10 +6,19 @@
 ---------
 # 목차
 + 개요
-  + 프로젝트 소개
+  + [프로젝트 소개](#-프로젝트-소개)
   + 프로젝트 기능
   + 사용 기술
   + 실행 화면
 ----------
+## 프로젝트 소개
+
+
+
+
+
+
+
+
 ### 1. login, join
 ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/17aaa790-e034-4a9b-bd87-889343f71329)
