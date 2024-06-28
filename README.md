@@ -47,8 +47,8 @@
 ## 4. 프로젝트 기능 및 실행 화면
 + 회원 관리
 <details>
-  <summary>1. 로그인, 회원가입</summary>
-  
+  <summary></summary>
+  1. 로그인, 회원가입
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/17aaa790-e034-4a9b-bd87-889343f71329)
   
 </details>
