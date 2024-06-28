@@ -161,3 +161,25 @@
 </details>
 
 ## 5. 사용 기술
+
++ **TOOL**
+  + Eclipse IDE 2020-12
+  + Oracle SQL Developer
+  + GitHub
+
++ **백엔드**
+  + Java 8 (1.8.0_151)
+  + Servlet
+  + AJAX
+  + DAO, VO
+  + MyBatis
+  + Mapper
+
++ **데이터베이스**
+  + Oracle 11g
+
++ **프론트엔드**
+  + HTML/CSS
+  + JavaScript
+
+     
