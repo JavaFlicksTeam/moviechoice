@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.mystudy.model.dao.postDAO;
-import com.mystudy.model.dao.reviewDAO;
 import com.project.dao.AccountDAO;
+import com.project.model.dao.postDAO;
+import com.project.model.dao.reviewDAO;
 import com.project.vo.AccountVO;
 
 public class UpdateAccountOkCommand implements Command{

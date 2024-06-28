@@ -1,4 +1,4 @@
-package com.mystudy.model.dao;
+package com.project.model.dao;
  
 import java.util.HashMap;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.vo.criticVO;
-import com.mystudy.model.vo.movieVO;
+import com.project.model.vo.criticVO;
+import com.project.model.vo.movieVO;
 import com.project.mybatis.DBService;
 
 public class movieDAO {

@@ -1,8 +1,8 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.mystudy.model.vo.qnaVO"%>
-<%@page import="com.mystudy.post.common.Paging"%>
-<%@page import="com.mystudy.model.dao.qnaDAO"%>
+<%@page import="com.project.model.vo.qnaVO"%>
+<%@page import="com.project.post.common.Paging"%>
+<%@page import="com.project.model.dao.qnaDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

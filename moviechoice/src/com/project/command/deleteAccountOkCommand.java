@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.criticDAO;
 import com.project.dao.AccountDAO;
+import com.project.model.dao.criticDAO;
 import com.project.vo.AccountVO;
 
 public class deleteAccountOkCommand implements Command{

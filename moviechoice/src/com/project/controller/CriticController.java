@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.dao.criticDAO;
-import com.mystudy.model.vo.criticVO;
+import com.project.model.dao.criticDAO;
+import com.project.model.vo.criticVO;
 
 @WebServlet("/criticController")
 public class CriticController extends HttpServlet { 

@@ -1,11 +1,11 @@
-<%@page import="com.mystudy.model.dao.inquiryDAO"%>
-<%@page import="com.mystudy.model.vo.inquiryVO"%>
+<%@page import="com.project.model.dao.inquiryDAO"%>
+<%@page import="com.project.model.vo.inquiryVO"%>
 <%@page import="com.project.dao.AccountDAO"%>
 <%@page import="com.project.vo.AccountVO"%>
 <%@page import="com.sun.nio.sctp.PeerAddressChangeNotification"%>
 <%@page import="java.util.List"%>
-<%@page import="com.mystudy.model.dao.qnaDAO"%>
-<%@page import="com.mystudy.model.vo.qnaVO"%>
+<%@page import="com.project.model.dao.qnaDAO"%>
+<%@page import="com.project.model.vo.qnaVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 

@@ -1,4 +1,4 @@
-<%@page import="com.mystudy.model.dao.postDAO"%>
+<%@page import="com.project.model.dao.postDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -6,7 +6,7 @@
  
 	String cPage = request.getParameter("cPage");
 %>
- 	<jsp:useBean id="cvo" class="com.mystudy.model.vo.postCommentVO"/>
+ 	<jsp:useBean id="cvo" class="com.project.model.vo.postCommentVO"/>
  	<jsp:setProperty property="*" name="cvo"/>
 <%
 	cvo.setNo((Integer) session.getAttribute("no"));

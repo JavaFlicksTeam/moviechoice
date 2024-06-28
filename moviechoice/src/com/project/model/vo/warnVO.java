@@ -1,4 +1,4 @@
-package com.mystudy.model.vo;
+package com.project.model.vo;
 
 public class warnVO {
 	private int idx;

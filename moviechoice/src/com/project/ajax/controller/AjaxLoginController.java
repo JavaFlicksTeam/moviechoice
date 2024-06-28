@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mystudy.model.vo.movieVO;
-import com.mystudy.model.vo.reviewVO;
 import com.project.dao.AccountDAO;
 //import com.project.dao.AdminDAO;
 import com.project.dao.AdminDAO;
+import com.project.model.vo.movieVO;
+import com.project.model.vo.reviewVO;
 
 @WebServlet("/ajaxLoginController")
 public class AjaxLoginController extends HttpServlet {

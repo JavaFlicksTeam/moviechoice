@@ -14,8 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.websocket.Session;
 
-import com.mystudy.model.dao.postDAO;
-import com.mystudy.model.dao.reviewDAO;
 import com.project.command.Command;
 import com.project.command.FindIdCommand;
 import com.project.command.FindIdOkCommand;
@@ -29,6 +27,8 @@ import com.project.command.UpdateAccountOkCommand;
 import com.project.command.deleteAccountCommand;
 import com.project.command.deleteAccountOkCommand;
 import com.project.dao.AccountDAO;
+import com.project.model.dao.postDAO;
+import com.project.model.dao.reviewDAO;
 import com.project.vo.AccountVO;
 
 @WebServlet("/loginController")

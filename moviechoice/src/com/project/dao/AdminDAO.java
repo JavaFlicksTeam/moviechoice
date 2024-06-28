@@ -8,9 +8,9 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mystudy.model.dao.recDAO;
-import com.mystudy.model.dao.warnDAO;
-import com.mystudy.model.vo.reviewVO;
+import com.project.model.dao.recDAO;
+import com.project.model.dao.warnDAO;
+import com.project.model.vo.reviewVO;
 import com.project.mybatis.DBService;
 import com.project.vo.AccountVO;
 

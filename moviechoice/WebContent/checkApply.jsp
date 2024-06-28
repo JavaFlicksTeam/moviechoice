@@ -1,7 +1,7 @@
 <%@page import="com.project.vo.AccountVO"%>
 <%@page import="com.project.dao.AccountDAO"%>
-<%@page import="com.mystudy.model.vo.criticVO"%>
-<%@page import="com.mystudy.model.dao.criticDAO"%>
+<%@page import="com.project.model.vo.criticVO"%>
+<%@page import="com.project.model.dao.criticDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

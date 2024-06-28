@@ -1,4 +1,4 @@
-package com.mystudy.model.dao;
+package com.project.model.dao;
 
 import java.util.HashMap;
 import java.util.Map;
