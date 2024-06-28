@@ -50,6 +50,11 @@
 
   ![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/17aaa790-e034-4a9b-bd87-889343f71329)
   1. 로그인, 회원가입
+
+![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/49dfb95f-0605-4bac-91bb-0414dc006d59)
+![image](https://github.com/JavaFlicksTeam/moviechoice/assets/66461013/80f273d3-12e6-4381-9028-ede6384f2527)
+
+  2. 마이페이지
 </details>
 
 
