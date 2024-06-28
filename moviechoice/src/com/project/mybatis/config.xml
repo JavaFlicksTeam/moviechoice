@@ -31,7 +31,6 @@
     </environment> 
   </environments>
   
-  
   <mappers>
     <mapper resource="com/project/mybatis/mapper.xml" />
     <mapper resource="com/project/mybatis/adminMapper.xml" />
